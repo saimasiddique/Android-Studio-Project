@@ -1,0 +1,64 @@
+<LinearLayout
+    android:layout_width="match_parent"
+    android:background="#bcdde2"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+        <EditText
+            android:id="@+id/TF_location"
+            android:layout_width="180dp"
+            android:layout_height="45dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Name"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/B_search"
+
+            android:layout_width="85dp"
+            android:layout_height="45dp"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/TF_location"
+            android:background="@drawable/btn_shape"
+            android:onClick="onClick"
+            android:text="Search" />
+
+        <Button
+            android:id="@+id/B_hopistals"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_below="@+id/TF_location"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/btn_shape"
+            android:onClick="onClick"
+            android:text="Hospitals" />
+
+    </LinearLayout>
+
+
+
+
+    <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.example.priyanka.mapsdemo.MapsActivity"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/B_hopistals" />
+
+
+</LinearLayout>
